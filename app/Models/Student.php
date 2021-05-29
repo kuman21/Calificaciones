@@ -128,7 +128,7 @@ class Student extends Model
     public function getAverageAttribute()
     {
         if (is_numeric($this->first_period_qualification) && is_numeric($this->second_period_qualification) && is_numeric($this->third_period_qualification)) {
-            return number_format(((float) $this->first_period_qualification + (float) $this->second_period_qualification + $this->third_period_qualification) / 3, 2);
+            return number_format(((float) $this->first_period_qualification + (float) $this->second_period_qualification + $this->third_period_qualification) / 3, 1);
         }
         
         return 'N/A';
