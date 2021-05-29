@@ -46,9 +46,9 @@
                                 Administrar Cuenta
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            {{--<x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 Perfil
-                            </x-jet-dropdown-link>
+                            </x-jet-dropdown-link>--}}
 
                             <div class="border-t border-gray-100"></div>
 
@@ -104,9 +104,9 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
-                <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                {{--<x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     Perfil
-                </x-jet-responsive-nav-link>
+                </x-jet-responsive-nav-link>--}}
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
