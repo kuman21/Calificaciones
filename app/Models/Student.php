@@ -22,6 +22,39 @@ class Student extends Model
     }
 
     /**
+     * Get the student's name.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function getNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    /**
+     * Get the student's last name.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function getLastNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    /**
+     * Get the student's mother's last name.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function getMothersLastNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    /**
      * Get the student's curp.
      *
      * @param  string  $value
@@ -30,6 +63,17 @@ class Student extends Model
     public function getCurpAttribute($value)
     {
         return strtoupper($value);
+    }
+
+    /**
+     * Get the student's group.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getGroupAttribute($value)
+    {
+        return ucfirst($value);
     }
 
     /**
@@ -208,5 +252,15 @@ class Student extends Model
     public function setObservationsAttribute($value)
     {
         $this->attributes['observations'] = mb_strtolower($value);
+    }
+
+    public function scopeFinderFilter($query, $search)
+    {
+        if ($search) {
+            return $query->where('name', 'LIKE', "%{$search}%")
+                 ->orWhere('last_name', 'LIKE', "%{$search}%")
+                 ->orWhere('mothers_last_name', 'LIKE', "%{$search}%")
+                 ->orWhere('curp', 'LIKE', "%{$search}%");
+        }
     }
 }

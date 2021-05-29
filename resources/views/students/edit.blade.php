@@ -1,11 +1,11 @@
-<x-dialog-modal wire:model="creatingStudent">
+<x-dialog-modal wire:model="updatingStudent">
     <x-slot name="title">
-        Crear Alumno
+        Actualizar Alumno
     </x-slot>
 
-    <form wire:submit.prevent="store">
+    <form wire:submit.prevent="update">
         <x-slot name="content">
-            <div class="grid grid-cols-12 gap-4" x-data="{}" x-on:creating-students.window="setTimeout(() => $refs.name.focus(), 250)">
+            <div class="grid grid-cols-12 gap-4" x-data="{}" x-on:updating-students.window="setTimeout(() => $refs.name.focus(), 250)">
                 <div class="col-span-12 sm:col-span-4">
                     <x-jet-label for="name" value="Nombre" />
                     <x-jet-input type="text" class="block mt-1 w-full"
@@ -86,14 +86,14 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$toggle('creatingStudent')" wire:loading.attr="disabled">
+            <x-jet-secondary-button wire:click="$toggle('updatingStudent')" wire:loading.attr="disabled">
                 Cancelar
             </x-jet-secondary-button>
 
             <x-jet-button class="ml-2"
-                        wire:click="store"
+                        wire:click="update"
                         wire:loading.attr="disabled">
-                Guardar
+                Actualizar
             </x-jet-button>
         </x-slot>
     </form>

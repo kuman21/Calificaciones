@@ -29,12 +29,12 @@
                         <x-td>{{ $student->grade_and_group }}</x-td>
                         <x-td-badge-element>{{ $student->average }}</x-td-badge-element>
                         <x-td-actions>
-                            <x-action-table url="#">
+                            <x-action-table wire:click="updateStudent({{ $student }})">
                                 <svg class="h-5 w-5 text-yellow-500 group-hover:text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                 </svg>
                             </x-action-table>
-                            <x-action-table class="ml-2" url="#">
+                            <x-action-table class="ml-2" wire:click="destroy({{ $student }})">
                                 <svg class="h-5 w-5 text-red-500 group-hover:text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
@@ -58,5 +58,6 @@
         </x-slot>
 
         @include('students.create')
+        @include('students.edit')
     </x-card>
 </div>
