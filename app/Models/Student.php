@@ -18,7 +18,7 @@ class Student extends Model
      */
     public function getFullNameAttribute()
     {
-        return ucfirst($this->name).' '.ucfirst($this->last_name).' '.ucfirst($this->mothers_last_name);
+        return ucwords($this->name).' '.ucfirst($this->last_name).' '.ucfirst($this->mothers_last_name);
     }
 
     /**
@@ -29,7 +29,7 @@ class Student extends Model
      */
     public function getNameAttribute($value)
     {
-        return ucfirst($value);
+        return ucwords($value);
     }
 
     /**
