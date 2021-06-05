@@ -204,6 +204,9 @@ class Students extends Component
                  ->finderFilter($this->search)
                  ->orderBy('grade', 'asc')
                  ->orderBy('group', 'asc')
+                 ->orderBy('last_name', 'asc')
+                 ->orderBy('mothers_last_name', 'asc')
+                 ->orderBy('name', 'asc')
                  ->paginate($this->perPage)
         ]);
     }
