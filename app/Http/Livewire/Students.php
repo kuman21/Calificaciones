@@ -202,6 +202,8 @@ class Students extends Component
         return view('livewire.students', [
             'students' => Student::where('user_id', \Auth::user()->id)
                  ->finderFilter($this->search)
+                 ->orderBy('grade', 'asc')
+                 ->orderBy('group', 'asc')
                  ->paginate($this->perPage)
         ]);
     }
