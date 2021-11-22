@@ -32,11 +32,11 @@
                                 <span class="block xl:inline">Prof. Víctor Tovar Ríos</span>--}}
                             </h1>
                             <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Consulta de evaluaciones de matemáticas por medio de la curp.
+                                Consulta de evaluaciones de matemáticas por medio de la matrícula.
                             </p>
                             <form action="{{ route('qualifications.show') }}" method="GET">
                                 <div class="mt-3 relative rounded-md shadow-sm">
-                                    <input type="text" name="curp" id="curp" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="Ingresa tu curp" required>
+                                    <input type="text" name="curp" id="curp" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="Ingresa tu matrícula" required>
                                 </div>
                                 <div class="mt-3 relative">
                                     <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
