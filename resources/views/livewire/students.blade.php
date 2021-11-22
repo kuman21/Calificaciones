@@ -15,7 +15,7 @@
         <x-table>
             <x-slot name="head">
                 <x-th>Nombre</x-th>
-                <x-th>Curp</x-th>
+                <x-th>Matrícula</x-th>
                 <x-th>Grupo</x-th>
                 <x-th>Promedio</x-th>
                 <x-th-actions></x-th-actions>
