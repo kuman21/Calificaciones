@@ -30,7 +30,7 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="curp" value="Curp" />
+                <x-jet-label for="curp" value="Matrícula" />
                 <x-jet-input type="text" class="block mt-1 w-full"
                             wire:model.defer="curp" />
                 <x-jet-input-error for="curp" class="mt-2" />
