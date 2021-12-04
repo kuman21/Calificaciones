@@ -18,7 +18,7 @@ class QualificationController extends Controller
         $student = Student::where('curp', mb_strtolower($request->curp))->first();
 
         if (!is_object($student)) {
-            session()->flash('flash.banner', 'La curp no coincide con nuestros registros, verifica que este escrita correctamente.');
+            session()->flash('flash.banner', 'La matrícula no coincide con nuestros registros, verifica que este escrita correctamente.');
             session()->flash('flash.bannerStyle', 'danger');
 
             return back();
